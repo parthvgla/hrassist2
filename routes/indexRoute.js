@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const hrRoute = require('./hrRoute');
+const adminRoute = require('./adminRoute');
+const employeeRoute = require('./employeeRoute');
+const generalRoute = require('./generalRoute');
+router.use("/api/hr/v1", hrRoute);
+router.use("/api/admin/v1", adminRoute);
+router.use("/api/employee/v1", employeeRoute);
+router.use("/api/general/v1", generalRoute);
+module.exports = router;
